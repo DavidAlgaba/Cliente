@@ -4,6 +4,13 @@ body{
     text-align: left;
 }
 
+#titulo{
+    background-color: red;
+}
+
+.foto{
+    float:right;
+}
 
 
 
