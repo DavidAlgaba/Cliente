@@ -1,0 +1,237 @@
+body{
+    font-family: sans-serif;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: lightgray;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+/*
+header{
+    width: 100%;
+    background: lightgray;
+    position: fixed;  Menu sigue con Scroll 
+}
+*/
+#menu_icono{
+    display: none;
+}
+
+.menu_v{
+    position: fixed;
+    background-color: lightgray;
+    /* transition: all 0.2s; Velocidad con la que se desliza*/
+    top: 70px;
+    left: 0;
+    text-align: center;
+}
+
+.menu_v ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_v li{
+    border-right: 1px solid rgb(0, 0, 0);
+    
+}
+
+.menu_v li :hover{
+    background-color: rgb(141, 146, 201);
+}
+
+.menu_v li a{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/* Llamar a menu desde izquierda
+#menu_icono:checked ~ .menu_v { /* Cuando menu_icono esté seleccionado, buscará a la class menu_v 
+    margin: 0;
+}
+*/
+
+.menu_h { 
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0%;
+    width: 100%;
+    height:70px;
+    left: 0%;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.menu_h a {
+    float: right;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 26px 60px;
+    text-decoration: none;
+}
+
+.menu_h a:hover {
+    background-color: rgb(141, 146, 201);
+}
+
+
+.monte{
+    width: 1563px;
+    height: 400px;
+    margin-top: 4px;
+}
+          
+.column {
+    float: left;
+    width: 32%;
+    padding: 10px;
+    background-color: rgb(141, 146, 201);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+.titulo_column{
+    font-weight:bold; text-align: center;
+}
+
+.carta1 {
+    float: left;
+    width: 32%;
+    padding: 10px;
+    background-color: lightslategray;
+    text-align: center;
+}      
+
+#tabla1:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#tabla2:after {
+    content: "";
+    clear: both;
+    display: table;
+}    
+
+.formularios{
+    text-align: center;
+    background-color: rgb(221, 187, 160);
+    padding: 50px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+}
+
+footer{
+    text-align:center;
+    background-color:black;
+    color:white;
+    padding: 40px;
+    opacity: 0.7;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.tabla_horario{
+    background-color: rgb(255, 158, 139);
+    margin-top: 0%;   
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-color: rgb(173, 168, 235);
+}
+  
+div.gallery:hover {
+    border: 1px solid #777;
+    background-color: lightslategray;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Prueba de animacion
+#animacion{
+    animation: rotation 20s infinite linear;
+}
+
+.animacion:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+@keyframes animacion {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(359deg);
+    }
+}
+*/
+
+.animacion{
+    display: block;
+    -webkit-animation: rotar 1s linear infinite;
+    -moz-animation: rotar 1s linear infinite;
+    animation: rotar 5s linear infinite;
+}
+
+@-webkit-keyframes rotar{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotar{
+    50%{-webkit-transform: rotate(360deg);}
+}
+
+@keyframes rotar{
+    50%{-webkit-transform: rotate(360deg);}
+}
+
+.animacion_1{
+    display: block;
+    -webkit-animation: voltear 1s linear infinite;
+    -moz-animation: voltear 1s linear infinite;
+    animation: voltear 5s linear infinite;
+}
+
+@-webkit-keyframes voltear{
+    100%{-webkit-transform: rotateY(0deg);}
+}
+
+@-moz-keyframes voltear{
+    100%{-webkit-transform: rotateY(360deg);}
+}
+
+@keyframes voltear{
+    100%{-webkit-transform: rotateY(360deg);}
+}
+
