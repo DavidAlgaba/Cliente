@@ -4,6 +4,10 @@ body{
     text-align: left;
 }
 
+h2{
+    text-decoration: underline;
+}
+
 #titulo{
     background-color: white;
     border: 3px solid rgb(0, 0, 0);
