@@ -15,14 +15,14 @@ h2{
     text-align: center;
 }
 
-.foto{
+#foto{
     float:right;
 }
 
 .bloque1{
     background-color: white;
     border: 1px solid rgb(0, 0, 0);
-    width: 40%;
+    width: 40%; 
 }
 
 .bloque2{
