@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promesa_portero</title>
+</head>
+<body>
+    
+    <script>
+
+        function porteroDiscoteca(edad){
+            return new Promise((resolve, reject) =>{
+                if(typeof edad == "number"){
+                    if (edad >= 18){
+                        resolve("Puedes pasar"); // fulfilled succesfully
+                    }
+                    else{
+                        reject("No puedes pasar"); // error, reject
+                    }
+                }
+                else{
+                    throw new Error("Texto introducido");
+                }
+            });
+        };
+
+        porteroDiscoteca(parseInt(window.prompt("Introduce tu edad")))
+            .then((msg) => {document.write(msg);})
+            .catch((err) => {document.write(err);});
+
+    </script>
+
+</body>
+</html>

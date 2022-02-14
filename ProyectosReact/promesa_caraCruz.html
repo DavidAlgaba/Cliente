@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesa_caraCruz</title>
+</head>
+
+<body>
+
+    <script>
+
+        const caraCruz = new Promise(function(resolve, reject){
+            //Numero aleatorio (0 o 1)
+            numeroAleatorio = Math.floor(Math.random()*2);
+
+                if (numeroAleatorio == 0){ // si el numero es 0 = cara
+                    resolve("Cara"); // fulfilled successfully
+                }
+                else{ //si el numero es 1 = cruz
+                    reject("Cruz"); // error, reject
+                }
+        });
+
+        caraCruz
+            .then((resolveMsg) => {document.write("Ha salido " + resolveMsg);})
+            .catch((err) => {document.write("Ha salido " + err);});
+
+        console.log(caraCruz);
+
+    </script>
+</body>
+
+</html>

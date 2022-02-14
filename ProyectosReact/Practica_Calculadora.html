@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Calculadora {
+
+            constructor() {
+                this._resultado = 0;
+                this._num1 = 0;
+                this._num2 = 0;
+            }
+
+            set resultado(eleccion) {
+
+                if (eleccion == "suma"){
+
+                    this._resultado = this._num1 + this._num2;
+                }
+                else if (eleccion == "resta"){
+                    this._resultado = this._num1 - this._num2;
+                }
+            }
+
+            get resultado() {
+
+                var cadena = "El resultado es: " + this._resultado;
+                document.getElementById("salida").innerHTML = cadena;
+            }
+
+            introducirDatos() {
+
+                let valor1, valor2;
+                valor1 = parseInt(prompt("Introduce primer número"));
+                valor2 = parseInt(prompt("Introduce segundo número"));
+                
+                this._num1 = valor1;
+                this._num2 = valor2;
+            }
+        }
+
+        function programa(operacion) {
+
+            var objCalcula = new Calculadora();
+            objCalcula.introducirDatos();
+            objCalcula.resultado = operacion;
+            objCalcula.resultado;
+        }
+
+    </script>
+
+    <div id="salida"></div>
+
+    <button onclick="programa('suma')">Suma</button>
+    <button onclick="programa('resta')">Resta</button>
+
+</body>
+
+</html>

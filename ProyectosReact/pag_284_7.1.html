@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.1</title>
+</head>
+
+<body>
+
+    <p>
+        <ol>
+            <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta necessitatibus rerum eveniet recusandae enim.
+                Delectus consectetur, similique itaque eveniet aspernatur explicabo repellat cumque vitae nobis sequi earum
+                quas, soluta harum.
+            </li>
+
+            <li>
+                In perspiciatis itaque molestias, qui aperiam pariatur. Perferendis, non delectus? Amet mollitia ducimus
+                voluptates accusamus consectetur explicabo quaerat. Minus natus asperiores eius sed veniam rerum enim illo
+                architecto ratione autem?
+            </li>
+
+            <li>
+                Quis accusamus nostrum corrupti quisquam eum enim quae ducimus, molestias veniam ex ut in temporibus velit
+                harum iusto animi cumque doloribus ratione ea quasi explicabo quas iste tempora! Similique, odit.
+            </li>
+            
+            <li>
+                Impedit recusandae eaque numquam maxime, alias, iure inventore aperiam eos nobis possimus totam. Minima
+                totam soluta cumque praesentium pariatur exercitationem corrupti. Et laboriosam at non quae nesciunt, illum
+                aperiam placeat?
+            </li>
+            <li>
+                Non nisi, minima provident unde neque distinctio necessitatibus quod laudantium esse quasi, nostrum nesciunt
+                dolore quaerat! Commodi unde, ut ex accusantium, consequuntur corporis enim quibusdam fugiat dolor qui, iure
+                doloribus?
+            </li>
+
+            <li>
+                Veniam modi aliquid adipisci ullam, blanditiis dolores cumque soluta voluptatum alias laudantium. Illo a,
+                ratione voluptatem rem possimus ipsam ex atque, in facilis, esse eveniet pariatur eligendi? Quas, illum
+                soluta!
+            </li>
+
+            <li>
+                Tempore quia tenetur nulla fugiat harum magnam illo vel necessitatibus quas natus sint, pariatur corporis
+                consequuntur voluptatibus dolore sequi temporibus sit eos. Vel, molestias consectetur quo excepturi
+                perspiciatis quas molestiae!
+            </li>
+
+            <li>
+                Excepturi mollitia maxime ipsam perspiciatis enim ducimus hic asperiores. Dolor dignissimos velit
+                consectetur molestiae ullam voluptate cum veniam aut assumenda adipisci? Numquam, quidem. Dolores possimus
+                fugit excepturi alias saepe minima!
+            </li>
+
+            <li>
+                Eum libero delectus earum voluptates distinctio alias inventore voluptas autem, reiciendis facilis officia
+                dolor ullam doloribus tenetur. Obcaecati ullam labore nostrum deserunt blanditiis consectetur quia commodi
+                porro rem ratione. Nam?
+            </li>
+        </ol>
+    </p>
+
+    <script>
+
+        var texto = prompt("Introduce texto");
+
+        let capa = document.getElementsByTagName("ol")[0];
+
+        var nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML="<strong>" + texto + "</strong>";
+
+        let num = prompt("Introduce un numero del 1 al 10");
+
+        while (num < 1 || num > 10){
+
+            num = prompt("Error, introduce un numero del 1 al 10");
+        }
+
+        let posterior = capa.children[num - 1];
+        capa.insertBefore(nuevoElemento, posterior);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

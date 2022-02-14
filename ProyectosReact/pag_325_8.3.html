@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        #capa{
+            position: fixed;
+            width: 50%;
+            height: 50%;
+            left: 25%;
+            top: 25%;
+            border: 1px solid black;
+        }
+    </style>
+
+    <div id="capa"></div>
+
+    <script>
+        var capa=document.getElementById("capa");
+
+        capa.addEventListener("mouseenter", (ev)=>{
+            capa.style.backgroundColor="green";
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var dato1, dato2, resultado;
+
+        $("button").click(function () {
+
+            dato1 = parseInt($("#A").val());
+            dato2 = parseInt($("#B").val());
+
+            if (dato1 > dato2) {
+
+                resultado = "El numero A es mayor";
+                $("#pelota").animate({left: "250px"},5000);
+            }
+            else if (dato1 < dato2){
+
+                resultado = "El numero B es mayor";
+                $("#pelota").animate({top: "250px"},5000);
+            }
+            else{
+                resultado = "Son iguales";
+            }
+
+            $("#pelota").animate({opacity: "0"});
+            $("#salida").append(resultado);
+            setTimeout("document.location.reload()",6000);
+        }    
+    )
+});
+
+</script>
+
+<style>
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+
+    <input type="text" id="A">
+    <input type="text" id="B">
+    <button>Empezar</button>
+
+    <div id="salida"></div>
+    
+    <br><br>
+
+    <div id="pelota">
+        <img src="pelota.png">
+    </div>
+
+</body>
+
+</html>

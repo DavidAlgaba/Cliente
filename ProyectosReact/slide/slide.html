@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script>
+
+    $(document).ready(function(){
+        $('.next').on('click', function(){
+            var currentImg = $('.active');
+            var nextImg = currentImg.next();
+
+            if(nextImg.length){
+                currentImg.removeClass('active').css('z-index', -10);
+                nextImg.addClass('active').css('z-index', 10);
+            }
+    });
+
+    $('.prev').on('click', function(){
+            var currentImg = $('.active');
+            var prevImg = currentImg.prev();
+
+            if(prevImg.length){
+                currentImg.removeClass('active').css('z-index', -10);
+                prevImg.addClass('active').css('z-index', 10);
+            }
+        });
+    });    
+
+
+</script>
+
+<style>
+
+    .contenedor{
+        width: 1000px;
+        margin: 40px auto;
+        overflow: auto;
+    }
+
+    .slider-inner{
+        width: 960px;
+        height: 540px;
+        position: relative;
+        overflow: hidden;
+        float: left;
+        padding: 3px;
+        border: #666 solid 1px;
+    }
+
+    .slider-inner img{
+        display: none;
+        width: 960px;
+        height: 540px;
+    }
+
+    .slider-inner img.active{
+        display: inline-block;
+    }
+
+    .prev,.next{
+        float: left;
+        margin-top: 260px;
+        cursor: pointer;
+    }
+
+    .prev{
+        position: relative;
+        margin-right: -45px;
+        z-index: 100;
+        width: 45px;
+        height: 45px;
+    }
+
+    .next{
+        position: relative;
+        margin-left: -45px;
+        z-index: 100;
+        width: 45px;
+        height: 45px;
+    }
+
+</style>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Slide</h1>
+
+        <div class="slide-outer">
+
+            <img src="izq.png" alt="prev" class="prev">
+
+            <div class="slider-inner">
+
+                <img src="coche1.jpg" class="active">
+                <img src="coche2.jpg">
+                <img src="coche3.jpg">
+                <img src="coche4.jpg">
+
+            </div>
+
+            <img src="drch.png" alt="next" class="next">
+
+        </div>
+    </div>
+    
+    
+</body>
+</html>
